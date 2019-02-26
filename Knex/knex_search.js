@@ -28,6 +28,11 @@ knexSelect.asCallback((err, rows) => {
   if (err) throw err;
   console.log('Searching ... ');
   console.log(`Found ${rows.length} person(s) by the name of '${argvInput}'`); 
+  if (!rows.length) {
+    console.log('Person wasn\'t found in Database.');
+    knex.destroy();
+    return undefined;
+  }
   rows.forEach((item, index) => {
   //output: famous_people found in test_db
   console.log(`- ${index + 1}: ${item.first_name} ${item.last_name} , born '${item.birthdate.toISOString().slice(0, 10)}' `);
