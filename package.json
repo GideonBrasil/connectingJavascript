@@ -1,0 +1,24 @@
+{
+  "name": "w4d2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lookup_people.js",
+  "dependencies": {
+    "pg": "^7.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GideonBrasil/connectingJavascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GideonBrasil/connectingJavascript/issues"
+  },
+  "homepage": "https://github.com/GideonBrasil/connectingJavascript#readme"
+}
