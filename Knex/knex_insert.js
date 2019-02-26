@@ -16,8 +16,12 @@ const first_name = process.argv[2];
 const last_name = process.argv[3];
 const birthdate = process.argv[4];
 
-// function for handling select and filtering table
-knex.select(`'${first_name}', '${last_name}', '${birthdate}'`).from('famous_people');
+// inserts data into test_db famous_people table
+knex('famous_people').insert({first_name: first_name, last_name: last_name, birthdate: birthdate}).asCallback((err, result) => {
+  if (err) throw err;
+  console.log('Data inserted succesfully.');
+  knex.destroy();
+});
 
 
 
